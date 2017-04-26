@@ -647,15 +647,49 @@
     </dependencies>
 
     <!-- ====================================================== -->
+    <!--                      组件依赖管理                       -->
+    <!-- ====================================================== -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>4.1.5.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.7.19</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <!-- ====================================================== -->
     <!--               项目构建（包名/默认目标/插件等）             -->
     <!-- ====================================================== -->
     <build>
         <finalName>${project.artifactId}</finalName>
         <defaultGoal>jetty:run</defaultGoal>
 
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.sql</include>
+                    <include>**/*.properties</include>
+                    <!--<include>properties/env_${deploy.env}.properties</include>-->
+                </includes>
+                <excludes>
+                    <exclude>jetty/**</exclude>
+                </excludes>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
-                <!--<groupId>org.mortbay.jetty</groupId>-->
                 <!-- 升级高版本的jetty的原因是为了在jdk8下不报索引越界异常 -->
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
