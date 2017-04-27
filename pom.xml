@@ -654,6 +654,12 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>com.tzg</groupId>
+                <artifactId>tool-support</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-web</artifactId>
                 <version>${spring.version}</version>
