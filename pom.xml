@@ -541,8 +541,7 @@
                     <include>**/*.vm</include>
                     <include>**/*.xml</include>
                     <include>**/*.sql</include>
-                    <include>**/*.properties</include>
-                    <!--<include>properties/env_${deploy.env}.properties</include>-->
+                    <include>properties/env_${deploy.env}.properties</include>
                 </includes>
                 <excludes>
                     <exclude>jetty/**</exclude>
