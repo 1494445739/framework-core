@@ -15,7 +15,7 @@
     <!-- ====================================================== -->
     <groupId>com.tzg</groupId>
     <artifactId>framework-core</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <!-- ====================================================== -->
     <!--                       项目名和组织                      -->
@@ -46,7 +46,7 @@
         <spring.version>4.1.5.RELEASE</spring.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <tzg.version>1.0.0-SNAPSHOT</tzg.version>
+        <tzg.version>1.0.1</tzg.version>
     </properties>
 
     <!-- ====================================================== -->
@@ -523,6 +523,25 @@
                 <artifactId>tool-support</artifactId>
                 <version>${tzg.version}</version>
             </dependency>
+            <dependency>
+            		<groupId>com.tzg</groupId>
+            		<artifactId>component-browser-starter</artifactId>
+            		<version>${tzg.version}</version>
+            </dependency>
+            <dependency>
+            		<groupId>com.tzg</groupId>
+            		<artifactId>web-auth</artifactId>
+            		<version>${tzg.version}</version>
+            		<type>war</type>
+            		<scope>runtime</scope>
+            </dependency>
+            <dependency>
+            		<groupId>com.tzg</groupId>
+            		<artifactId>web-auth</artifactId>
+            		<version>${tzg.version}</version>
+            		<classifier>classes</classifier>
+            		<scope>provided</scope>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
@@ -541,8 +560,7 @@
                     <include>**/*.vm</include>
                     <include>**/*.xml</include>
                     <include>**/*.sql</include>
-                    <include>**/*.properties</include>
-                    <!--<include>properties/env_${deploy.env}.properties</include>-->
+                    <include>properties/env_${deploy.env}.properties</include>
                 </includes>
                 <excludes>
                     <exclude>jetty/**</exclude>
