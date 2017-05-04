@@ -523,6 +523,25 @@
                 <artifactId>tool-support</artifactId>
                 <version>${tzg.version}</version>
             </dependency>
+            <dependency>
+            		<groupId>com.tzg</groupId>
+            		<artifactId>component-browser-starter</artifactId>
+            		<version>${tzg.version}</version>
+            </dependency>
+            <dependency>
+            		<groupId>com.tzg</groupId>
+            		<artifactId>web-auth</artifactId>
+            		<version>${tzg.version}</version>
+            		<type>war</type>
+            		<scope>runtime</scope>
+            </dependency>
+            <dependency>
+            		<groupId>com.tzg</groupId>
+            		<artifactId>web-auth</artifactId>
+            		<version>${tzg.version}</version>
+            		<classifier>classes</classifier>
+            		<scope>provided</scope>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
