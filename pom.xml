@@ -91,6 +91,16 @@
     <dependencyManagement>
         <dependencies>
 
+            <!-- ******************************* -->
+            <!-- dubbo支持:                      -->
+            <!--   1. dubbo                      -->
+            <!-- ******************************* -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>2.5.3.1</version>
+            </dependency>
+
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
