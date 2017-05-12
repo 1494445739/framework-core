@@ -570,7 +570,7 @@
                 <version>${tzg.version}</version>
             </dependency>
             <dependency>
-                <groupId>error</groupId>
+                <groupId>com.tzg</groupId>
                 <artifactId>component-redis</artifactId>
                 <version>${tzg.version}</version>
             </dependency>
