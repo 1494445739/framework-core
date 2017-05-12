@@ -98,7 +98,7 @@
             </dependency>
 
             <dependency>
-                <groupId>dom4j</groupId>
+                <groupId>dom4j</groupId>ｃｏｍ
                 <artifactId>dom4j</artifactId>
                 <version>1.6.1</version>
             </dependency>
@@ -567,6 +567,11 @@
             <dependency>
                 <groupId>com.tzg</groupId>
                 <artifactId>component-mongodb</artifactId>
+                <version>${tzg.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>error</groupId>
+                <artifactId>component-redis</artifactId>
                 <version>${tzg.version}</version>
             </dependency>
         </dependencies>
