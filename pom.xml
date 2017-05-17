@@ -92,6 +92,27 @@
         <dependencies>
 
             <dependency>
+                <groupId>com.dangdang</groupId>
+                <artifactId>config-toolkit</artifactId>
+                <version>3.1.7.2-RELEASE</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>guava</artifactId>
+                        <groupId>com.google.guava</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>19.0</version>
+            </dependency>
+
+            <dependency>
                 <groupId>commons-logging</groupId>
                 <artifactId>commons-logging</artifactId>
                 <version>1.2</version>
@@ -569,6 +590,11 @@
             <dependency>
                 <groupId>com.tzg</groupId>
                 <artifactId>component-browser-starter</artifactId>
+                <version>${tzg.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tzg</groupId>
+                <artifactId>component-dubbo</artifactId>
                 <version>${tzg.version}</version>
             </dependency>
             <dependency>
