@@ -594,6 +594,11 @@
             </dependency>
             <dependency>
                 <groupId>com.tzg</groupId>
+                <artifactId>component-dubbo</artifactId>
+                <version>${tzg.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tzg</groupId>
                 <artifactId>web-auth</artifactId>
                 <version>${tzg.version}</version>
                 <type>war</type>
