@@ -124,10 +124,6 @@
                 <version>1.6.1</version>
             </dependency>
 
-            <!-- ******************************* -->
-            <!-- dubbo支持:                      -->
-            <!--   1. dubbo                      -->
-            <!-- ******************************* -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>dubbo</artifactId>
