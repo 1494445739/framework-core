@@ -714,8 +714,33 @@
                     <attachClasses>true</attachClasses>
                 </configuration>
             </plugin>
+
+            <!-- 添加checkstyle检查，用法：mvn compile checkstyle:checkstyle -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+            <!-- 添加了jxr插件，用来在生成的结果中可以通过link找到代码对应的行（便于查看代码位置）。用法: mvn jxr:jxr。然后到target/site下查看.html文件 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.3</version>
+            </plugin>
+
         </plugins>
     </build>
+
+    <!-- mvn compile findbugs:findbugs / mvn findbugs:gui -->
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>2.5.2</version>
+            </plugin>
+        </plugins>
+    </reporting>
 
     <!-- ====================================================== -->
     <!-- 发布管理                                                -->
