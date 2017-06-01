@@ -15,7 +15,7 @@
     <!-- ====================================================== -->
     <groupId>com.tzg</groupId>
     <artifactId>framework-core</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.2</version>
 
     <!-- ====================================================== -->
     <!--                       项目名和组织                      -->
@@ -46,7 +46,7 @@
         <spring.version>4.1.5.RELEASE</spring.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <tzg.version>1.0.0-SNAPSHOT</tzg.version>
+        <tzg.version>1.0.2</tzg.version>
     </properties>
 
     <!-- ====================================================== -->
@@ -124,10 +124,6 @@
                 <version>1.6.1</version>
             </dependency>
 
-            <!-- ******************************* -->
-            <!-- dubbo支持:                      -->
-            <!--   1. dubbo                      -->
-            <!-- ******************************* -->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>dubbo</artifactId>
