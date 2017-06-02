@@ -15,7 +15,7 @@
     <!-- ====================================================== -->
     <groupId>com.tzg</groupId>
     <artifactId>framework-core</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <!-- ====================================================== -->
     <!--                       项目名和组织                      -->
@@ -45,8 +45,7 @@
         <jackson.version>1.9.12</jackson.version>
         <spring.version>4.1.5.RELEASE</spring.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
-        <tzg.version>1.0.2</tzg.version>
+        <tzg.version>1.0.1</tzg.version>
     </properties>
 
     <!-- ====================================================== -->
@@ -90,27 +89,6 @@
     <!-- ====================================================== -->
     <dependencyManagement>
         <dependencies>
-
-            <dependency>
-                <groupId>com.dangdang</groupId>
-                <artifactId>config-toolkit</artifactId>
-                <version>3.1.7.2-RELEASE</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-api</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <artifactId>guava</artifactId>
-                        <groupId>com.google.guava</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>com.google.guava</groupId>
-                <artifactId>guava</artifactId>
-                <version>19.0</version>
-            </dependency>
 
             <dependency>
                 <groupId>commons-logging</groupId>
