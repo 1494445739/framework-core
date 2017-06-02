@@ -631,6 +631,11 @@
                 <artifactId>component-redis</artifactId>
                 <version>${tzg.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.tzg</groupId>
+                <artifactId>component-druid-statistics</artifactId>
+                <version>${tzg.version}</version>
+            </dependency>
         </dependencies>
 
     </dependencyManagement>
