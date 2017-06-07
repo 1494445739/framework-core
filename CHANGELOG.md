@@ -13,3 +13,7 @@
 2017/6/1
 
 + 新增shiro-cas的dependency支持
+
+2017/6/7
+
++ 新增cas-client-core的dependency支持
