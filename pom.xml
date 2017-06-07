@@ -46,7 +46,7 @@
         <spring.version>4.1.5.RELEASE</spring.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <tzg.version>${project.version}</tzg.version>
+        <tzg.version>1.0.1</tzg.version>
     </properties>
 
     <!-- ====================================================== -->
