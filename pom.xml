@@ -763,7 +763,7 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>${npm}</executable>
+                            <executable>${npm.path}</executable>
                             <arguments>
                                 <argument>install</argument>
                             </arguments>
@@ -778,7 +778,7 @@
                             <goal>exec</goal>
                         </goals>
                         <configuration>
-                            <executable>${npm}</executable>
+                            <executable>${npm.path}</executable>
                             <arguments>
                                 <argument>run</argument>
                                 <argument>build</argument>
@@ -861,14 +861,14 @@
         <profile>
             <id>window</id>
             <properties>
-                <npm>npm.cmd</npm>
+                <npm.path>npm.cmd</npm.path>
             </properties>
         </profile>
 
         <profile>
             <id>linux</id>
             <properties>
-                <npm>npm</npm>
+                <npm.path>npm</npm.path>
             </properties>
         </profile>
     </profiles>
