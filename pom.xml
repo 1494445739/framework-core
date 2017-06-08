@@ -731,6 +731,8 @@
                 <version>2.4</version>
                 <configuration>
                     <attachClasses>true</attachClasses>
+                    <!-- 在集成前端并进行打包的时候, 过滤掉源码和依赖库 -->
+                    <packagingExcludes>src/**, node_modules/**, *.json, *.js</packagingExcludes>
                 </configuration>
             </plugin>
 
@@ -745,6 +747,47 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
                 <version>2.3</version>
+            </plugin>
+
+            <!-- maven集成前端打包工具 -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+
+                    <execution>
+                        <id>exec-npm-install</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>${npm.path}</executable>
+                            <arguments>
+                                <argument>install</argument>
+                            </arguments>
+                            <workingDirectory>${basedir}/src/main/webapp</workingDirectory>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>exec-npm-run-build</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <executable>${npm.path}</executable>
+                            <arguments>
+                                <argument>run</argument>
+                                <argument>build</argument>
+                            </arguments>
+                            <workingDirectory>${basedir}/src/main/webapp</workingDirectory>
+                        </configuration>
+                    </execution>
+
+                </executions>
             </plugin>
 
         </plugins>
@@ -812,6 +855,20 @@
             <id>pre</id>
             <properties>
                 <deploy.env>pre</deploy.env>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>window</id>
+            <properties>
+                <npm.path>npm.cmd</npm.path>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>linux</id>
+            <properties>
+                <npm.path>npm</npm.path>
             </properties>
         </profile>
     </profiles>
