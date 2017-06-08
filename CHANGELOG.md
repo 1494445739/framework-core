@@ -21,3 +21,7 @@
 2017/6/2
 
 + 新增component-druid-statistics的dependency支持
+
+2017/6/8
+
++ 新增velocity支持

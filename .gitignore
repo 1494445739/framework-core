@@ -1,2 +1,4 @@
 .idea/
 framework-core.iml
+package.json
+.gitignore
