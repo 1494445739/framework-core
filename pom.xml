@@ -662,7 +662,7 @@
                     <include>**/*.xml</include>
                     <include>**/*.sql</include>
                     <include>properties/env_${deploy.env}.properties</include>
-                    <include>properties/velocity.properties</include>
+                    <include>velocity/**</include>
                 </includes>
                 <excludes>
                     <exclude>jetty/**</exclude>
