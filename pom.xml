@@ -50,46 +50,39 @@
     </properties>
 
     <!-- ====================================================== -->
-    <!--                   组件依赖（第三方依赖）                  -->
-    <!-- ====================================================== -->
-    <dependencies>
-
-        <!-- ******************************* -->
-        <!-- logback includes:               -->
-        <!--   1. slf4j-api                  -->
-        <!--   2. logback-classsic           -->
-        <!-- ******************************* -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.1.6</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
-
-    </dependencies>
-
-    <!-- ====================================================== -->
     <!--                      组件依赖管理                       -->
     <!-- ====================================================== -->
     <dependencyManagement>
         <dependencies>
+
+            <!-- ******************************* -->
+            <!-- logback includes:               -->
+            <!--   1. slf4j-api                  -->
+            <!--   2. logback-classsic           -->
+            <!-- ******************************* -->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${slf4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.1.6</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+                <scope>test</scope>
+            </dependency>
 
             <dependency>
                 <groupId>org.jasig.cas.client</groupId>
