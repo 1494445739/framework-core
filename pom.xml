@@ -15,7 +15,7 @@
     <!-- ====================================================== -->
     <groupId>com.tzg</groupId>
     <artifactId>framework-core</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <!-- ====================================================== -->
     <!--                       项目名和组织                      -->
@@ -46,7 +46,7 @@
         <spring.version>4.3.8.RELEASE</spring.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
       
-        <tzg.version>1.0.2</tzg.version>
+        <tzg.version>1.0.0-SNAPSHOT</tzg.version>
     </properties>
 
     <!-- ====================================================== -->
@@ -742,47 +742,6 @@
                 <version>2.3</version>
             </plugin>
 
-            <!-- maven集成前端打包工具 -->
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>1.6.0</version>
-                <executions>
-
-                    <execution>
-                        <id>exec-npm-install</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>${npm.path}</executable>
-                            <arguments>
-                                <argument>install</argument>
-                            </arguments>
-                            <workingDirectory>${basedir}/src/main/webapp</workingDirectory>
-                        </configuration>
-                    </execution>
-
-                    <execution>
-                        <id>exec-npm-run-build</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>exec</goal>
-                        </goals>
-                        <configuration>
-                            <executable>${npm.path}</executable>
-                            <arguments>
-                                <argument>run</argument>
-                                <argument>build</argument>
-                            </arguments>
-                            <workingDirectory>${basedir}/src/main/webapp</workingDirectory>
-                        </configuration>
-                    </execution>
-
-                </executions>
-            </plugin>
-
         </plugins>
     </build>
 
@@ -853,16 +812,98 @@
 
         <profile>
             <id>window</id>
-            <properties>
-                <npm.path>npm.cmd</npm.path>
-            </properties>
+            <build>
+                <plugins>
+                    <!-- maven集成前端打包工具 -->
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.6.0</version>
+                        <executions>
+
+                            <execution>
+                                <id>exec-npm-install</id>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>npm.cmd</executable>
+                                    <arguments>
+                                        <argument>install</argument>
+                                    </arguments>
+                                    <workingDirectory>${basedir}/src/main/webapp</workingDirectory>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>exec-npm-run-build</id>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>npm.cmd</executable>
+                                    <arguments>
+                                        <argument>run</argument>
+                                        <argument>build</argument>
+                                    </arguments>
+                                    <workingDirectory>${basedir}/src/main/webapp</workingDirectory>
+                                </configuration>
+                            </execution>
+
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
 
         <profile>
             <id>linux</id>
-            <properties>
-                <npm.path>npm</npm.path>
-            </properties>
+            <build>
+                <plugins>
+                    <!-- maven集成前端打包工具 -->
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.6.0</version>
+                        <executions>
+
+                            <execution>
+                                <id>exec-npm-install</id>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>npm</executable>
+                                    <arguments>
+                                        <argument>install</argument>
+                                    </arguments>
+                                    <workingDirectory>${basedir}/src/main/webapp</workingDirectory>
+                                </configuration>
+                            </execution>
+
+                            <execution>
+                                <id>exec-npm-run-build</id>
+                                <phase>prepare-package</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>npm</executable>
+                                    <arguments>
+                                        <argument>run</argument>
+                                        <argument>build</argument>
+                                    </arguments>
+                                    <workingDirectory>${basedir}/src/main/webapp</workingDirectory>
+                                </configuration>
+                            </execution>
+
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 
