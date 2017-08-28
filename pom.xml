@@ -55,6 +55,13 @@
     <dependencyManagement>
         <dependencies>
 
+            <!-- 加解密开源工具包 -->
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>
+                <version>1.9</version>
+            </dependency>
+
             <!-- Hessian工具支持 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
