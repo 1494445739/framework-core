@@ -754,8 +754,8 @@
                         <allowDuplicateFragmentNames>true</allowDuplicateFragmentNames>
                         <defaultsDescriptor>src/main/resources/jetty/webdefault.xml</defaultsDescriptor>
                     </webApp>
-                    <stopKey/>
-                    <stopPort/>
+                    <stopKey>foo</stopKey>
+                    <stopPort>9999</stopPort>
                 </configuration>
             </plugin>
 
